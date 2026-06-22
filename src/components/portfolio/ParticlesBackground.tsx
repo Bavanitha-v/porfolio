@@ -1,22 +1,18 @@
-import { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
+import Particles, { ParticlesProvider, useParticlesProvider } from "@tsparticles/react";
+import type { Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
-export function ParticlesBackground() {
-  const [ready, setReady] = useState(false);
+async function init(engine: Engine) {
+  await loadSlim(engine);
+}
 
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => setReady(true));
-  }, []);
-
-  if (!ready) return null;
-
+function Inner() {
+  const { loaded } = useParticlesProvider();
+  if (!loaded) return null;
   return (
     <Particles
       id="tsparticles"
-      className="absolute inset-0 -z-10"
+      className="absolute inset-0"
       options={{
         background: { color: { value: "transparent" } },
         fpsLimit: 60,
@@ -32,18 +28,8 @@ export function ParticlesBackground() {
         },
         particles: {
           color: { value: ["#00e5ff", "#7c3aed", "#ec4899"] },
-          links: {
-            color: "#00e5ff",
-            distance: 140,
-            enable: true,
-            opacity: 0.25,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 0.8,
-            outModes: { default: "bounce" },
-          },
+          links: { color: "#00e5ff", distance: 140, enable: true, opacity: 0.25, width: 1 },
+          move: { enable: true, speed: 0.8, outModes: { default: "bounce" } },
           number: { value: 70, density: { enable: true } },
           opacity: { value: 0.5 },
           shape: { type: "circle" },
@@ -52,5 +38,13 @@ export function ParticlesBackground() {
         detectRetina: true,
       }}
     />
+  );
+}
+
+export function ParticlesBackground() {
+  return (
+    <ParticlesProvider init={init}>
+      <Inner />
+    </ParticlesProvider>
   );
 }
