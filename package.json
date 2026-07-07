@@ -53,6 +53,8 @@
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
+    "firebase": "^12.15.0",
+    "firebase-tools": "^15.22.0",
     "framer-motion": "^12.40.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.575.0",
@@ -68,7 +70,6 @@
     "three": "^0.184.0",
     "tw-animate-css": "^1.3.4",
     "vaul": "^1.1.2",
-    "vite-tsconfig-paths": "^6.0.2",
     "zod": "^3.24.2"
   },
   "devDependencies": {
