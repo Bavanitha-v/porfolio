@@ -8,7 +8,7 @@ export function About() {
       id="about"
       eyebrow="About"
       title={<>Engineer, learner, <span className="gradient-text">builder.</span></>}
-      subtitle="I study Artificial Intelligence & Data Science, and I love turning research-grade ideas into products people can actually feel."
+      subtitle="A 3rd-year AI & Data Science undergraduate passionate about building real-world applications through AI, ML, and Full-Stack Development."
     >
       <div className="grid lg:grid-cols-5 gap-6">
         <motion.div
@@ -19,15 +19,21 @@ export function About() {
           className="lg:col-span-3 glass rounded-3xl p-8 sm:p-10"
         >
           <p className="text-lg leading-relaxed text-foreground/85">
-            I'm <span className="text-foreground font-semibold">Bavanitha</span> — an
-            AI & Data Science undergrad who blends deep learning, real-time data
-            pipelines, and thoughtful interface design. My work spans emergency
-            response systems, emotion recognition, and tools that make machine
-            intelligence feel approachable.
+            I'm <span className="text-foreground font-semibold">Bavanitha</span>, a 3rd-year
+            Artificial Intelligence and Data Science undergraduate with a strong passion for
+            AI, Machine Learning, Data Science, and Full-Stack Development. I enjoy building
+            real-world applications that solve meaningful problems through technology.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            I'm happiest when I'm shipping fast, designing systems that scale, and
-            making complex tech feel calm and useful.
+            My interests include Artificial Intelligence, Machine Learning, Python, React,
+            TypeScript, Data Analytics, and Web Development. I have worked on projects such as
+            AI-based Emergency Response Systems and continuously explore new technologies to
+            improve my skills.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            I believe in continuous learning, teamwork, and creating innovative solutions that
+            make a positive impact. My goal is to become a skilled AI Engineer and Full-Stack
+            Developer, contributing to cutting-edge technologies and real-world innovation.
           </p>
 
           <a
@@ -50,7 +56,7 @@ export function About() {
         >
           {[
             { k: "Focus", v: "AI / ML" },
-            { k: "Studying", v: "AI & DS" },
+            { k: "Year", v: "3rd Year" },
             { k: "Stack", v: "Python · React" },
             { k: "Status", v: "Open to work" },
           ].map((c) => (
