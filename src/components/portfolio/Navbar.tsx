@@ -1,5 +1,6 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useState, useEffect } from "react";
+import { handleScroll } from "@/lib/utils";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -40,7 +41,7 @@ export function Navbar() {
         className={`fixed top-3 inset-x-0 z-40 mx-auto max-w-5xl px-4 transition-all`}
       >
         <div className={`glass rounded-2xl px-4 py-3 flex items-center justify-between ${scrolled ? "glow-ring" : ""}`}>
-          <a href="#home" className="font-mono text-sm tracking-tight">
+          <a href="#home" onClick={(e) => handleScroll(e, "#home")} className="font-mono text-sm tracking-tight">
             <span className="gradient-text font-bold">{"<bavanitha />"}</span>
           </a>
 
@@ -49,6 +50,7 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
+                onClick={(e) => handleScroll(e, l.href)}
                 className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-lg transition-colors relative group"
               >
                 {l.label}
@@ -59,6 +61,7 @@ export function Navbar() {
 
           <a
             href="#contact"
+            onClick={(e) => handleScroll(e, "#contact")}
             className="hidden md:inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg"
             style={{ background: "var(--gradient-primary)", color: "#0a0a0f" }}
           >
@@ -86,7 +89,10 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                onClick={() => setOpen(false)}
+                onClick={(e) => {
+                  setOpen(false);
+                  handleScroll(e, l.href);
+                }}
                 className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground"
               >
                 {l.label}

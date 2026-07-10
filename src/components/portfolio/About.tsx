@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
 import { Mail, ArrowRight, Sparkles, Brain, Code2, Rocket } from "lucide-react";
+import { handleScroll } from "@/lib/utils";
 
 export function About() {
   return (
@@ -86,6 +87,7 @@ export function About() {
 
           <a
             href="#contact"
+            onClick={(e) => handleScroll(e, "#contact")}
             className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-transform hover:scale-105 active:scale-95"
             style={{ background: "var(--gradient-primary)", color: "#0a0a0f", boxShadow: "var(--shadow-glow)" }}
           >
