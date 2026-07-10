@@ -33,8 +33,9 @@ export function Resume() {
         <motion.a
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
-          href="#"
-          download
+          href="https://1drv.ms/w/c/202c5f10aa9f720a/IQBwMJ1PydOsTITA1hA-hBxZAZq9VH_tueT91NNxTAlGPhk?e=XgKqpn"
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative z-10 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
           style={{ background: "var(--gradient-primary)", color: "#0a0a0f", boxShadow: "var(--shadow-glow)" }}
         >
