@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Linkedin, Instagram, Youtube, Github, Twitter } from "lucide-react";
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", href: "#", color: "#00e5ff" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/bavanitha-v-76219b350", color: "#00e5ff" },
   { icon: Github, label: "GitHub", href: "#", color: "#ffffff" },
   { icon: Twitter, label: "Twitter", href: "#", color: "#00e5ff" },
   { icon: Instagram, label: "Instagram", href: "#", color: "#ec4899" },
@@ -24,6 +24,8 @@ export function Socials() {
               <motion.a
                 key={s.label}
                 href={s.href}
+                target={s.href !== "#" ? "_blank" : undefined}
+                rel={s.href !== "#" ? "noopener noreferrer" : undefined}
                 aria-label={s.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
