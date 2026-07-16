@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
 import { ClientOnly } from "./ClientOnly";
 import { ParticlesBackground } from "./ParticlesBackground";
-import { HeroScene } from "./HeroScene";
+import { AnimatedLogoText } from "./AnimatedLogoText";
 
 export function Hero() {
   return (
@@ -32,7 +32,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]"
           >
-            Hi, I'm <span className="gradient-text">Bavanitha</span>
+            Hi, I'm <AnimatedLogoText />
             <br />
             <span className="text-foreground/80">I build </span>
             <span className="gradient-text">intelligent</span>
@@ -89,10 +89,13 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="relative h-[420px] sm:h-[520px] lg:h-[600px]"
         >
-          <div className="absolute inset-0 rounded-3xl glass overflow-hidden">
-            <ClientOnly fallback={<div className="w-full h-full bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10" />}>
-              <HeroScene />
-            </ClientOnly>
+          <div className="absolute inset-0 rounded-3xl glass overflow-hidden flex items-center justify-center p-6 sm:p-8">
+            <img
+              src="/images/brain.png"
+              alt="Futuristic AI Brain"
+              className="w-full h-full object-contain animate-float"
+              loading="eager"
+            />
           </div>
           <div className="pointer-events-none absolute -inset-4 rounded-[2rem] blur-3xl opacity-40" style={{ background: "var(--gradient-primary)" }} />
         </motion.div>

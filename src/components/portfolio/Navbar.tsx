@@ -41,8 +41,8 @@ export function Navbar() {
         className={`fixed top-3 inset-x-0 z-40 mx-auto max-w-5xl px-4 transition-all`}
       >
         <div className={`glass rounded-2xl px-4 py-3 flex items-center justify-between ${scrolled ? "glow-ring" : ""}`}>
-          <a href="#home" onClick={(e) => handleScroll(e, "#home")} className="font-mono text-sm tracking-tight">
-            <span className="gradient-text font-bold">{"<bavanitha />"}</span>
+          <a href="#home" onClick={(e) => handleScroll(e, "#home")} className="logo-glass-container group">
+            <span className="chrome-text">AI & Data Science Developer</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -51,10 +51,10 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={(e) => handleScroll(e, l.href)}
-                className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-lg transition-colors relative group"
+                className="nav-link-ai px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-lg relative group"
               >
-                {l.label}
-                <span className="absolute left-3 right-3 -bottom-0.5 h-px bg-gradient-to-r from-cyan-400 to-fuchsia-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
+                <span className="relative z-10 font-medium tracking-wide">{l.label}</span>
+                <span className="nav-underline" />
               </a>
             ))}
           </nav>
@@ -93,9 +93,10 @@ export function Navbar() {
                   setOpen(false);
                   handleScroll(e, l.href);
                 }}
-                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground"
+                className="nav-link-ai px-4 py-2 text-sm text-muted-foreground hover:text-foreground relative group"
               >
-                {l.label}
+                <span className="relative z-10 font-medium tracking-wide">{l.label}</span>
+                <span className="nav-underline" />
               </a>
             ))}
           </motion.div>

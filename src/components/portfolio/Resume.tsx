@@ -33,7 +33,7 @@ export function Resume() {
         <motion.a
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
-          href="https://1drv.ms/w/c/202c5f10aa9f720a/IQBwMJ1PydOsTITA1hA-hBxZAZq9VH_tueT91NNxTAlGPhk?e=XgKqpn"
+          href="https://1drv.ms/w/c/202c5f10aa9f720a/IQB0y33g1Lw-Qr6kH4vtreP2AVF3PXapEwDEktUm-IEgLGI?e=hDgzVc"
           target="_blank"
           rel="noopener noreferrer"
           className="relative z-10 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"

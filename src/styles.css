@@ -141,3 +141,121 @@ body {
 ::-webkit-scrollbar-track { background: #0a0a0f; }
 ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #00e5ff55, #7c3aed55); border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #00e5ff99, #7c3aed99); }
+
+/* Futuristic Typography Logo */
+.logo-glass-container {
+  padding: 0.3rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(124, 58, 237, 0.03));
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 9999px;
+  box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.05), 0 0 15px rgba(0, 229, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.logo-glass-container:hover {
+  border-color: rgba(0, 229, 255, 0.5);
+  box-shadow: inset 0 0 25px rgba(0, 229, 255, 0.15), 0 0 25px rgba(0, 229, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.logo-futuristic {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.05em;
+  background: linear-gradient(to right, #00e5ff, #3b82f6, #00e5ff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+/* Chrome Metallic Text Effect */
+.chrome-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e2e8f0 30%,
+    #64748b 48%,
+    #020617 50%,
+    #2563eb 55%,
+    #60a5fa 80%,
+    #ffffff 100%
+  );
+  background-size: 100% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: liquid-chrome 6s ease-in-out infinite alternate;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8)) drop-shadow(0 0 15px rgba(37, 99, 235, 0.4));
+  text-shadow: 0px -1px 1px rgba(255,255,255,0.3);
+}
+
+@keyframes liquid-chrome {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* Animated AI Nav Links */
+.nav-link-ai {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-link-ai:hover {
+  color: #00e5ff !important;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.nav-link-ai::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 229, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+}
+
+.nav-link-ai:hover::before {
+  left: 200%;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link-ai .nav-underline {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 2px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00e5ff, #7c3aed, transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+  border-radius: 4px;
+}
+
+.nav-link-ai:hover .nav-underline {
+  transform: scaleX(1);
+}
