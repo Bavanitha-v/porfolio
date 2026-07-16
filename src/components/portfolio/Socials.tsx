@@ -3,7 +3,7 @@ import { Linkedin, Instagram, Youtube, Github, Twitter } from "lucide-react";
 
 const socials = [
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/bavanitha-v-76219b350", color: "#00e5ff" },
-  { icon: Github, label: "GitHub", href: "#", color: "#ffffff" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Bavanitha-v", color: "#ffffff" },
   { icon: Twitter, label: "Twitter", href: "#", color: "#00e5ff" },
   { icon: Instagram, label: "Instagram", href: "#", color: "#ec4899" },
   { icon: Youtube, label: "YouTube", href: "#", color: "#ef4444" },

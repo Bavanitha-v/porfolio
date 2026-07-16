@@ -3,9 +3,9 @@ import { Section } from "./Section";
 import { Github, Code2, Trophy } from "lucide-react";
 
 const profiles = [
-  { icon: Github, name: "GitHub", handle: "@bavanitha", stat: "120+ commits/yr", color: "#00e5ff" },
-  { icon: Code2, name: "LeetCode", handle: "bavanitha", stat: "300+ solved", color: "#7c3aed" },
-  { icon: Trophy, name: "HackerRank", handle: "bavanitha", stat: "5★ Problem Solving", color: "#ec4899" },
+  { icon: Github, name: "GitHub", handle: "@bavanitha", stat: "120+ commits/yr", color: "#00e5ff", url: "https://github.com/Bavanitha-v" },
+  { icon: Code2, name: "LeetCode", handle: "bavanitha", stat: "300+ solved", color: "#7c3aed", url: "#" },
+  { icon: Trophy, name: "HackerRank", handle: "bavanitha", stat: "5★ Problem Solving", color: "#ec4899", url: "#" },
 ];
 
 export function CodingProfiles() {
@@ -20,7 +20,9 @@ export function CodingProfiles() {
           const Icon = p.icon;
           return (
             <motion.a
-              href="#"
+              href={p.url}
+              target={p.url !== "#" ? "_blank" : undefined}
+              rel="noopener noreferrer"
               key={p.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
