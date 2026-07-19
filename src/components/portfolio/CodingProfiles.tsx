@@ -4,7 +4,7 @@ import { Github, Code2, Trophy } from "lucide-react";
 
 const profiles = [
   { icon: Github, name: "GitHub", handle: "@bavanitha", stat: "120+ commits/yr", color: "#00e5ff", url: "https://github.com/Bavanitha-v" },
-  { icon: Code2, name: "LeetCode", handle: "bavanitha", stat: "300+ solved", color: "#7c3aed", url: "#" },
+  { icon: Code2, name: "LeetCode", handle: "bavanithaV", stat: "300+ solved", color: "#ffa116", url: "https://leetcode.com/u/bavanithaV/" },
   { icon: Trophy, name: "HackerRank", handle: "bavanitha", stat: "5★ Problem Solving", color: "#ec4899", url: "#" },
 ];
 
