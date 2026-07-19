@@ -31,8 +31,8 @@ export function Section({
               {eyebrow}
             </div>
           )}
-          <h2 className="text-4xl sm:text-5xl font-bold leading-tight">{title}</h2>
-          {subtitle && <p className="mt-4 text-muted-foreground text-lg">{subtitle}</p>}
+          <h2 className="text-[36px] sm:text-[48px] lg:text-[64px] font-bold leading-[1.15] tracking-tight">{title}</h2>
+          {subtitle && <p className="mt-5 text-muted-foreground text-base sm:text-lg lg:text-xl leading-[1.7]">{subtitle}</p>}
         </motion.div>
         {children}
       </div>

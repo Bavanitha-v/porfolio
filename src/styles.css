@@ -31,6 +31,8 @@
   --color-ring: var(--ring);
   --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-poppins: "Poppins", sans-serif;
+  --font-pacifico: "Pacifico", cursive;
 }
 
 :root {
